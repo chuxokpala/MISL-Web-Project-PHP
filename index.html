@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Masterbills Group - Launching Soon">
+    <meta name="author" content="Masterbills Group">
+
+    <title>Masterbills Group | Coming Soon</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            background: #000;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .site-wrapper {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .cover-container {
+            z-index: 2;
+            position: relative;
+        }
+
+        .cover-heading {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .masthead-brand a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .mastfoot {
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        #clock {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=k_okcNVZqqI', containment:'body', autoPlay:true, mute:true, startAt:5, stopAt:120, quality:'default', opacity:1}"></a>
+
+        <div class="overlay"></div>
+
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center cover-container">
+            <header class="mb-4">
+                <h3 class="masthead-brand">
+                    <a href="tel:+2348090377704"><i class="fas fa-phone"></i> (234) 809 037 7704</a>
+                    <small class="d-block">Click to call</small>
+                </h3>
+                <nav class="mt-2">
+                    <!--<a href="https://twitter.com/#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>-->
+                    <!--<a href="https://www.facebook.com/#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>-->
+                    <a href="mailto:info@masterbillsgroup.com" class="text-white mx-2"><i class="fas fa-envelope"></i></a>
+                </nav>
+            </header>
+
+            <main>
+                <h1 class="cover-heading"><i class="fas fa-clock"></i> Coming Soon</h1>
+                <p class="lead">We are working on something exciting! Stay tuned</p>
+                <div id="clock"></div>
+                <p class="lead mt-4">
+                    <a href="mailto:info@masterbillsgroup.com" class="btn btn-lg btn-outline-light">Contact Us</a>
+                </p>
+            </main>
+
+            <footer class="mastfoot mt-5">
+                <p>&copy; <a href="/" class="text-white">Masterbills Group</a> | <a href="http://masterbillsgroup.com/" class="text-white">#MasterbillsGroup</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Countdown and Background Video Scripts -->
+    <script src="js/device.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script>
+        $('#bgndVideo').YTPlayer();
+        $('#clock').countdown("2025/12/31", function(event) {
+            $(this).html(event.strftime('%D days %H:%M:%S'));
+        });
+    </script>
+</body>
+
+</html>
