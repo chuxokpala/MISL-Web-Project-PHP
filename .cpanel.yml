@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/aesokmlv/public_html/masterbillsgroup.com
+    - /bin/cp -r * $DEPLOYPATH
